@@ -1,0 +1,13 @@
+{
+  "name": "elidan-fuertes-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio — Elidan Fuertes, BSIT student",
+  "scripts": {
+    "build": "tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --minify",
+    "watch": "tailwindcss -i ./src/css/input.css -o ./dist/css/output.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "tailwindcss": "^4.2.4"
+  }
+}

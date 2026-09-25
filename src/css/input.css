@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+/*
+  my custom styles on top of Tailwind — most of the layout/spacing
+  is just utility classes in the HTML, this file is for the stuff
+  Tailwind can't do out of the box (the flip cards, marquee, carousel)
+  plus my own notes below so I remember what I picked and why.
+*/
+
+/*
+  colors + fonts I'm using — keeping this here so I don't have to
+  guess the hex every time I want to reuse a color somewhere custom
+
+  went black & white on purpose — no accent hue anywhere, just black,
+  white, and the slate gray scale in between. contrast + typography
+  are doing the work instead of color, which is the look I wanted.
+
+  colors:
+    slate-900 = #0f172a   basically my "black" — headings, dark sections
+                          (hero, marquee, contact, flip-card backs), and
+                          anything that used to be my accent color
+    slate-700 = #334155   hover state on the black buttons (lighter, since
+                          black itself is already the darkest I've got)
+    slate-500 = #64748b   muted/secondary text, eyebrow labels
+    slate-400 = #94a3b8   muted text on dark backgrounds
+    slate-200 = #e2e8f0   borders
+    slate-50  = #f8fafc   light section backgrounds
+    black     = #000000   footer only
+    white     = #ffffff
+
+  fonts:
+    body   → 'DM Sans'          (everything else)
+    h1–h4  → 'League Spartan'   (bolder, used for headings + big numbers)
+    .mono  → 'JetBrains Mono'   (nav links, tags, labels — gives it a "code" feel)
+*/
+
+/* ── Fonts ── */
+body {
+  font-family: "DM Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: "League Spartan", sans-serif;
+}
+.mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* ── Flip cards (Skills section) ── */
+.perspective {
+  perspective: 1000px;
+}
+.flip-card {
+  position: relative;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s ease;
+}
+.flip-trigger:hover .flip-card,
+.flip-trigger.flipped .flip-card {
+  transform: rotateY(180deg);
+}
+.face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.face.back {
+  transform: rotateY(180deg);
+}
+/*end */
+
+/* ── Marquee animation ── */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+/*end */
+
+/* ── Nav underline hover (slate-900 = #0f172a, my "black") ── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #0f172a;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+/*end */
+
+/* ── Hamburger open state ── */
+.ham-open .bar-1 {
+  transform: translateY(7px) rotate(45deg);
+}
+.ham-open .bar-2 {
+  opacity: 0;
+}
+.ham-open .bar-3 {
+  transform: translateY(-7px) rotate(-45deg);
+}
+/*end */
+
+.browser-chrome {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  background: rgba(15, 23, 42, 0.25);
+}
+.browser-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.55);
+}
+.project-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.25);
+}
+/*end */
+
+/* ── Projects carousel ── */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+/*end */

@@ -1,0 +1,1318 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EliDigital</title>
+    <meta
+      name="description"
+      content="Elidan Fuertes Portfolio, a 3rd-year BSIT student in Palawan, Philippines, building web applications and Power BI dashboards for OJT in Metro Manila."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Elidan Fuertes — BSIT Student & Aspiring Data Analyst"
+    />
+    <meta
+      property="og:description"
+      content="Web development and data analytics projects, skills, and how to get in touch."
+    />
+    <meta property="og:image" content="assets/images/elidan-hero.jpg" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+    <!-- compiled Tailwind build  -->
+    <link rel="stylesheet" href="dist/css/output.css" />
+
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=League+Spartan:wght@700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-slate-50 text-slate-800 overflow-x-hidden">
+    <!-- NAV -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 bg-white/95 shadow-sm"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          href="#home"
+          class="font-display text-2xl font-extrabold text-slate-400 tracking-tight"
+        >
+          <span class="text-slate-900">E</span>li<span class="text-slate-900"
+            >D</span
+          >igital
+        </a>
+
+        <!-- Desktop links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            href="#home"
+            class="nav-link mono text-xs tracking-widest uppercase text-slate-500 hover:text-slate-900 transition-colors"
+            >Home</a
+          >
+          <a
+            href="#projects"
+            class="nav-link mono text-xs tracking-widest uppercase text-slate-500 hover:text-slate-900 transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#skills"
+            class="nav-link mono text-xs tracking-widest uppercase text-slate-500 hover:text-slate-900 transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#about"
+            class="nav-link mono text-xs tracking-widest uppercase text-slate-500 hover:text-slate-900 transition-colors"
+            >About</a
+          >
+
+          <!-- Resume file  -->
+          <a
+            href="assets/documents/elidan-fuertes-resume.pdf"
+            download
+            class="nav-link mono text-xs tracking-widest uppercase text-slate-500 hover:text-slate-900 transition-colors flex items-center gap-1.5"
+          >
+            <i class="fa-solid fa-download text-[10px]"></i>Résumé
+          </a>
+          <a
+            href="#contact"
+            class="mono text-xs tracking-widest uppercase font-bold bg-slate-900 text-white px-5 py-2 rounded hover:bg-slate-700 transition-colors"
+          >
+            Contact
+          </a>
+        </div>
+        <!-- desktop links end  -->
+
+        <!-- Hamburger -->
+        <button
+          id="hamburger"
+          aria-label="Toggle menu"
+          class="flex md:hidden flex-col gap-1 w-7 cursor-pointer"
+        >
+          <span
+            class="bar-1 block h-0.5 bg-slate-800 rounded transition-all duration-300"
+          ></span>
+          <span
+            class="bar-2 block h-0.5 bg-slate-800 rounded transition-opacity duration-300"
+          ></span>
+          <span
+            class="bar-3 block h-0.5 bg-slate-800 rounded transition-all duration-300"
+          ></span>
+        </button>
+        <!-- hamburger end -->
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden px-6 pb-4 bg-white border-t border-slate-100"
+      >
+        <a
+          href="#home"
+          onclick="closeMobile()"
+          class="block py-2 mono text-sm uppercase text-slate-500 hover:text-slate-900"
+          >Home</a
+        >
+        <a
+          href="#projects"
+          onclick="closeMobile()"
+          class="block py-2 mono text-sm uppercase text-slate-500 hover:text-slate-900"
+          >Projects</a
+        >
+        <a
+          href="#skills"
+          onclick="closeMobile()"
+          class="block py-2 mono text-sm uppercase text-slate-500 hover:text-slate-900"
+          >Skills</a
+        >
+        <a
+          href="#about"
+          onclick="closeMobile()"
+          class="block py-2 mono text-sm uppercase text-slate-500 hover:text-slate-900"
+          >About</a
+        >
+        <a
+          href="assets/documents/elidan-fuertes-resume.pdf"
+          download
+          class="block py-2 mono text-sm uppercase text-slate-500 hover:text-slate-900"
+          >Résumé</a
+        >
+        <a
+          href="#contact"
+          onclick="closeMobile()"
+          class="block py-2 mono text-sm uppercase text-slate-500 hover:text-slate-900"
+          >Contact</a
+        >
+      </div>
+      <!-- mobile menu end -->
+    </nav>
+    <!-- nav end -->
+
+    <!-- HERO -->
+    <section id="home" class="relative">
+      <div class="pt-28 pb-20 bg-slate-900 text-white">
+        <div
+          class="relative max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center"
+        >
+          <div>
+            <span
+              class="mono text-xs tracking-widest uppercase bg-white/20 text-white px-3 py-1 rounded-full mb-6 inline-block"
+            >
+              BS Information Technology · 3rd Year
+            </span>
+
+            <h2 class="text-5xl font-extrabold leading-tight mb-5">
+              Elidan Fuertes<br />
+            </h2>
+
+            <p class="text-lg mb-8 text-slate-300">
+              An IT student from Palawan who builds web apps and turns data into
+              decisions. I work with PHP, Laravel, MySQL, and JavaScript on the
+              web side, and Python, pandas, and Power BI on the data side.
+              Passionate about data analytics. Finding the story behind the
+              numbers and making it clear enough for anyone to act on.
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#projects"
+                class="bg-white text-slate-900 px-6 py-3 rounded-lg font-bold hover:bg-slate-200 transition-colors"
+              >
+                Projects
+              </a>
+              <a
+                href="#contact"
+                class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-colors"
+              >
+                Contact
+              </a>
+            </div>
+
+            <!-- stats -->
+            <div
+              class="flex flex-wrap gap-10 mt-12 pt-8 border-t border-white/30"
+            >
+              <div>
+                <div class="font-display text-4xl font-extrabold text-white">
+                  6+
+                </div>
+                <div class="text-sm text-slate-400 mt-1">
+                  Portfolio Projects
+                </div>
+              </div>
+              <div>
+                <div class="font-display text-4xl font-extrabold text-white">
+                  5+
+                </div>
+                <div class="text-sm text-slate-400 mt-1">
+                  Tools &amp; Technologies
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center order-first md:order-none">
+            <div
+              class="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full border-4 border-white/30 overflow-hidden shadow-2xl"
+            >
+              <img
+                src="assets/images/dpFinal.png"
+                alt="Elidan Fuertes"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero end -->
+
+    <!-- marquee -->
+    <div class="bg-slate-900 py-3 overflow-hidden" aria-hidden="true">
+      <div class="animate-marquee flex w-max">
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Web Development
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Data Analytics
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Power BI &amp; SQL
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Fast Interfaces
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >UI/UX Design
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Git &amp; GitHub
+        </span>
+        <!-- duplicate for seamless loop -->
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Web Development
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Data Analytics
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Power BI &amp; SQL
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Fast Interfaces
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >UI/UX Design
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Git &amp; GitHub
+        </span>
+        <!-- second half repeats the same 6 items so each half is wide enough to fill the screen -->
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Web Development
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Data Analytics
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Power BI &amp; SQL
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Fast Interfaces
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >UI/UX Design
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Git &amp; GitHub
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Web Development
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Data Analytics
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Power BI &amp; SQL
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Fast Interfaces
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >UI/UX Design
+        </span>
+        <span
+          class="mono text-xs tracking-widest uppercase text-white font-bold whitespace-nowrap mr-14"
+          >Git &amp; GitHub
+        </span>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <h3 class="text-5xl font-extrabold mb-3">Featured Projects</h3>
+          <p class="text-slate-500 max-w-xl mx-auto">
+            Hands on work from my BSIT coursework and self-study.
+          </p>
+        </div>
+
+        <div class="relative">
+          <div
+            id="projectsTrack"
+            class="flex gap-8 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide"
+          >
+            <!-- Project 1: eliAqua -->
+            <article
+              class="project-card snap-start flex-none w-[88%] sm:w-[420px] bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm flex flex-col"
+            >
+              <div class="bg-slate-800">
+                <div class="browser-chrome">
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                </div>
+                <div
+                  class="project-gallery relative h-56 overflow-hidden cursor-pointer"
+                >
+                  <img
+                    src="assets/images/projects/eliAqua/eliaqua-home.png"
+                    alt="Eliaqua homepage — water delivery landing page"
+                    data-caption="Home"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/eliAqua/eliaqua-user-dashboard.png"
+                    alt="Eliaqua customer dashboard showing order history"
+                    data-caption="Customer Dashboard"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/eliAqua/eliaqua-admin-dashboard.png"
+                    alt="Eliaqua admin dashboard"
+                    data-caption="Admin Dashboard"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/eliAqua/eliaqua-manage-products.png"
+                    alt="Eliaqua manage products screen"
+                    data-caption="Manage Products"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <button
+                    type="button"
+                    class="gallery-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    aria-label="Previous screenshot"
+                  >
+                    <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="gallery-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    aria-label="Next screenshot"
+                  >
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                  <span
+                    class="gallery-caption absolute bottom-2 left-2 mono text-[10px] tracking-widest uppercase bg-black/60 text-white px-2 py-1 rounded"
+                  ></span>
+                  <div
+                    class="gallery-dots absolute bottom-2 right-2 flex gap-1.5"
+                  >
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1">
+                <h4 class="text-lg font-bold mb-2">Eliaqua</h4>
+                <p class="text-slate-500 text-sm mb-4 grow">
+                  A PHP &amp; MySQL web app for a clean drinking-water delivery
+                  service — user registration, ordering, and an admin dashboard
+                  for managing users and orders.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-5">
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >PHP</span
+                  >
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >MySQL</span
+                  >
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >Laragon</span
+                  >
+                </div>
+                <a
+                  href="https://github.com/Elidann/eliAqua"
+                  target="_blank"
+                  class="text-sm font-semibold text-slate-900 hover:text-slate-600 inline-flex items-center gap-2"
+                >
+                  <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 2: Eli Fishing Store -->
+            <article
+              class="project-card snap-start flex-none w-[88%] sm:w-[420px] bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm flex flex-col"
+            >
+              <div class="bg-slate-800">
+                <div class="browser-chrome">
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                </div>
+                <div
+                  class="project-gallery relative h-56 overflow-hidden cursor-pointer"
+                >
+                  <img
+                    src="assets/images/projects/eliFishingStore/fishing-home.png"
+                    alt="Eli Fishing Store landing page"
+                    data-caption="Home"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/eliFishingStore/fishing-dashboard.png"
+                    alt="Eli Fishing Store dashboard with sales, revenue, and low-stock summary"
+                    data-caption="Dashboard"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/eliFishingStore/fishing-materials.png"
+                    alt="Eli Fishing Store fishing materials list with search and category filter"
+                    data-caption="Fishing Materials"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/eliFishingStore/fishing-customers.png"
+                    alt="Eli Fishing Store customer list"
+                    data-caption="Customers"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/eliFishingStore/fishing-sales.png"
+                    alt="Eli Fishing Store sales records"
+                    data-caption="Sales"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <button
+                    type="button"
+                    class="gallery-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    aria-label="Previous screenshot"
+                  >
+                    <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="gallery-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    aria-label="Next screenshot"
+                  >
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                  <span
+                    class="gallery-caption absolute bottom-2 left-2 mono text-[10px] tracking-widest uppercase bg-black/60 text-white px-2 py-1 rounded"
+                  ></span>
+                  <div
+                    class="gallery-dots absolute bottom-2 right-2 flex gap-1.5"
+                  >
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1">
+                <h4 class="text-lg font-bold mb-2">Eli Fishing Store</h4>
+                <p class="text-slate-500 text-sm mb-4 grow">
+                  A Laravel inventory &amp; point-of-sale system for a fishing
+                  supply store, with role-based access and automatic stock
+                  tracking.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-5">
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >Laravel</span
+                  >
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >PHP</span
+                  >
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >MySQL</span
+                  >
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >Tailwind CSS</span
+                  >
+                </div>
+                <a
+                  href="https://github.com/Elidann/Store-fishing-system"
+                  target="_blank"
+                  class="text-sm font-semibold text-slate-900 hover:text-slate-600 inline-flex items-center gap-2"
+                >
+                  <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 3: Nashville Housing Sales Dashboard -->
+            <article
+              class="project-card snap-start flex-none w-[88%] sm:w-[420px] bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm flex flex-col"
+            >
+              <div class="bg-slate-800">
+                <div class="browser-chrome">
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                </div>
+                <div
+                  class="project-gallery relative h-56 overflow-hidden cursor-pointer"
+                >
+                  <img
+                    src="assets/images/projects/NashvilleHousing/nashville-housing-overview.png"
+                    alt="Nashville Housing Sales Dashboard overview in Power BI"
+                    data-caption="Overview"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/NashvilleHousing/nashville-housing-city-breakdown.png"
+                    alt="Nashville Housing sales breakdown by city"
+                    data-caption="City Breakdown"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <button
+                    type="button"
+                    class="gallery-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    aria-label="Previous screenshot"
+                  >
+                    <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="gallery-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    aria-label="Next screenshot"
+                  >
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                  <span
+                    class="gallery-caption absolute bottom-2 left-2 mono text-[10px] tracking-widest uppercase bg-black/60 text-white px-2 py-1 rounded"
+                  ></span>
+                  <div
+                    class="gallery-dots absolute bottom-2 right-2 flex gap-1.5"
+                  >
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1">
+                <h4 class="text-lg font-bold mb-2">
+                  Nashville Housing Sales Dashboard
+                </h4>
+                <p class="text-slate-500 text-sm mb-4 grow">
+                  A Power BI dashboard cleaning and analyzing Nashville housing
+                  sales data — total sale value, trends by year, and breakdowns
+                  by land use and city.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-5">
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >Power BI</span
+                  >
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >SQL</span
+                  >
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >Data Cleaning</span
+                  >
+                </div>
+                <a
+                  href="https://github.com/Elidann/Nashville-housing-powerbi"
+                  target="_blank"
+                  class="text-sm font-semibold text-slate-900 hover:text-slate-600 inline-flex items-center gap-2"
+                >
+                  <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 4: SmileCare Dental Clinic -->
+            <article
+              class="project-card snap-start flex-none w-[88%] sm:w-[420px] bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm flex flex-col"
+            >
+              <div class="bg-slate-800">
+                <div class="browser-chrome">
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                </div>
+                <div
+                  class="project-gallery relative h-56 overflow-hidden cursor-pointer"
+                >
+                  <img
+                    src="assets/images/projects/smileCare/smilecare-home.png"
+                    alt="SmileCare Dental Clinic homepage"
+                    data-caption="Home"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/smileCare/smilecare-book-appointment.png"
+                    alt="SmileCare book-an-appointment dashboard"
+                    data-caption="Book Appointment"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/smileCare/smilecare-admin-dashboard.png"
+                    alt="SmileCare admin dashboard"
+                    data-caption="Admin Dashboard"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <button
+                    type="button"
+                    class="gallery-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    aria-label="Previous screenshot"
+                  >
+                    <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="gallery-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    aria-label="Next screenshot"
+                  >
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                  <span
+                    class="gallery-caption absolute bottom-2 left-2 mono text-[10px] tracking-widest uppercase bg-black/60 text-white px-2 py-1 rounded"
+                  ></span>
+                  <div
+                    class="gallery-dots absolute bottom-2 right-2 flex gap-1.5"
+                  >
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1">
+                <h4 class="text-lg font-bold mb-2">SmileCare Dental Clinic</h4>
+                <p class="text-slate-500 text-sm mb-4 grow">
+                  A PHP &amp; MySQL booking platform for a dental clinic —
+                  browse services and doctors, and book appointments online in a
+                  few simple steps.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-5">
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >PHP</span
+                  >
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >MySQL</span
+                  >
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >Laragon</span
+                  >
+                </div>
+                <a
+                  href="https://github.com/Elidann/smilecare"
+                  target="_blank"
+                  class="text-sm font-semibold text-slate-900 hover:text-slate-600 inline-flex items-center gap-2"
+                >
+                  <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 5: SIS Portal -->
+            <article
+              class="project-card snap-start flex-none w-[88%] sm:w-[420px] bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm flex flex-col"
+            >
+              <div class="bg-slate-800">
+                <div class="browser-chrome">
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                </div>
+                <div
+                  class="project-gallery relative h-56 overflow-hidden cursor-pointer"
+                >
+                  <img
+                    src="assets/images/projects/studentInformationSystem/sis-dashboard.png"
+                    alt="SIS Portal admin dashboard with student, course, and user counts"
+                    data-caption="Dashboard"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/studentInformationSystem/sis-students.png"
+                    alt="SIS Portal student list"
+                    data-caption="Student List"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/studentInformationSystem/sis-courses.png"
+                    alt="SIS Portal course list"
+                    data-caption="Course List"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/studentInformationSystem/sis-users.png"
+                    alt="SIS Portal user management"
+                    data-caption="User Management"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/studentInformationSystem/sis-profile.png"
+                    alt="SIS Portal profile settings"
+                    data-caption="Profile Settings"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <button
+                    type="button"
+                    class="gallery-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    aria-label="Previous screenshot"
+                  >
+                    <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="gallery-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    aria-label="Next screenshot"
+                  >
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                  <span
+                    class="gallery-caption absolute bottom-2 left-2 mono text-[10px] tracking-widest uppercase bg-black/60 text-white px-2 py-1 rounded"
+                  ></span>
+                  <div
+                    class="gallery-dots absolute bottom-2 right-2 flex gap-1.5"
+                  >
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1">
+                <h4 class="text-lg font-bold mb-2">
+                  SIS Portal — Student Information System
+                </h4>
+                <p class="text-slate-500 text-sm mb-4 grow">
+                  A Laravel web app for managing students, courses, and user
+                  accounts, with login and role-based admin access.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-5">
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >Laravel</span
+                  >
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >PHP</span
+                  >
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >MySQL</span
+                  >
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >Tailwind CSS</span
+                  >
+                </div>
+                <a
+                  href="https://github.com/roniloD3rd/sis-app"
+                  target="_blank"
+                  class="text-sm font-semibold text-slate-900 hover:text-slate-600 inline-flex items-center gap-2"
+                >
+                  <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 6: Patient Waiting List Dashboard -->
+            <article
+              class="project-card snap-start flex-none w-[88%] sm:w-[420px] bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm flex flex-col"
+            >
+              <div class="bg-slate-800">
+                <div class="browser-chrome">
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                </div>
+                <div
+                  class="project-gallery relative h-56 overflow-hidden cursor-pointer"
+                >
+                  <img
+                    src="assets/images/projects/patientsInAndOut/waitlist-summary.png"
+                    alt="Patient Waiting List Dashboard summary page with KPI cards and trend charts"
+                    data-caption="Summary"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-300"
+                  />
+                  <img
+                    src="assets/images/projects/patientsInAndOut/waitlist-detailed-view.png"
+                    alt="Patient Waiting List Dashboard detailed pivot table view"
+                    data-caption="Detailed View"
+                    class="gallery-img absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  />
+                  <button
+                    type="button"
+                    class="gallery-prev absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    aria-label="Previous screenshot"
+                  >
+                    <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="gallery-next absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    aria-label="Next screenshot"
+                  >
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                  <span
+                    class="gallery-caption absolute bottom-2 left-2 mono text-[10px] tracking-widest uppercase bg-black/60 text-white px-2 py-1 rounded"
+                  ></span>
+                  <div
+                    class="gallery-dots absolute bottom-2 right-2 flex gap-1.5"
+                  >
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white"
+                    ></span>
+                    <span
+                      class="gallery-dot w-1.5 h-1.5 rounded-full bg-white/40"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 flex flex-col flex-1">
+                <span
+                  class="inline-block mono text-[10px] tracking-widest uppercase bg-slate-900 text-white px-2 py-1 rounded mb-3"
+                >
+                  Power BI Project
+                </span>
+                <h4 class="text-lg font-bold mb-2">
+                  Patient Waiting List Dashboard
+                </h4>
+                <p class="text-slate-500 text-sm mb-4 grow">
+                  A Power BI dashboard analyzing Ireland's HSE National Patient
+                  Waiting List (2018–2021) — KPI cards, trend charts, and a
+                  detailed pivot view, with a dark, card-based design I built
+                  myself.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-5">
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >Power BI</span
+                  >
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >DAX</span
+                  >
+                  <span
+                    class="mono text-[10px] uppercase bg-white border border-slate-200 px-2 py-1 rounded text-slate-600"
+                    >Power Query</span
+                  >
+                </div>
+                <span
+                  class="text-sm font-semibold text-slate-400 inline-flex items-center gap-2"
+                >
+                  <i class="fa-solid fa-clock"></i> Repo link coming soon
+                </span>
+              </div>
+            </article>
+          </div>
+
+          <button
+            id="projectsPrev"
+            type="button"
+            aria-label="Previous project"
+            class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-md items-center justify-center text-slate-600 hover:text-slate-900 hover:border-slate-400 transition-colors cursor-pointer"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button
+            id="projectsNext"
+            type="button"
+            aria-label="Next project"
+            class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-md items-center justify-center text-slate-600 hover:text-slate-900 hover:border-slate-400 transition-colors cursor-pointer"
+          >
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS — flip cards, hover flip -->
+    <section id="skills" class="py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h3 class="text-4xl font-extrabold mb-3">Skills &amp; Expertise</h3>
+          <p class="text-slate-500">
+            Hover the cards to flip and see the breakdown
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Card 1 — Frontend -->
+          <div class="perspective h-64 cursor-pointer flip-trigger">
+            <div class="flip-card h-full">
+              <div
+                class="face bg-white border border-slate-200 shadow p-8 flex flex-col justify-center items-center text-center"
+              >
+                <h4 class="text-xl font-bold mb-2">Frontend Development</h4>
+                <p class="text-slate-500 text-sm">
+                  Building responsive, modern websites with HTML, CSS,
+                  JavaScript, and Tailwind CSS with a focus on clean UI.
+                </p>
+              </div>
+              <div
+                class="face back bg-slate-900 flex flex-col justify-center items-center text-white text-center p-8"
+              >
+                <p class="text-slate-400 text-sm">
+                  Responsive Layouts <br />Tailwind CSS<br />
+                  Interactive UI <br />
+                  Mobile-First Design <br />Clean Code
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 — Backend -->
+          <div class="perspective h-64 cursor-pointer flip-trigger">
+            <div class="flip-card h-full">
+              <div
+                class="face bg-white border border-slate-200 shadow p-8 flex flex-col justify-center items-center text-center"
+              >
+                <h4 class="text-xl font-bold mb-2">Backend Development</h4>
+                <p class="text-slate-500 text-sm">
+                  Building server-side logic and databases with PHP, MySQL, and
+                  Laravel — from schema design to deployment on Apache.
+                </p>
+              </div>
+              <div
+                class="face back bg-slate-900 flex flex-col justify-center items-center text-white text-center p-8"
+              >
+                <p class="text-slate-400 text-sm">
+                  PHP &amp; MySQL <br />
+                  Laravel <br />
+                  Apache / Laragon <br />
+                  Git Workflow <br />
+                  Debugging
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 — Data Analytics -->
+          <div class="perspective h-64 cursor-pointer flip-trigger">
+            <div class="flip-card h-full">
+              <div
+                class="face bg-white border border-slate-200 shadow p-8 flex flex-col justify-center items-center text-center"
+              >
+                <h4 class="text-xl font-bold mb-2">Data Analytics</h4>
+                <p class="text-slate-500 text-sm">
+                  Currently building dashboards in Power BI and learning SQL and
+                  Excel for data cleaning and reporting.
+                </p>
+              </div>
+              <div
+                class="face back bg-slate-900 flex flex-col justify-center items-center text-white text-center p-8"
+              >
+                <p class="text-slate-400 text-sm">
+                  Power BI <br />
+                  Excel <br />
+                  SQL Basics <br />
+                  Data Cleaning <br />
+                  Dashboard Design
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 — Git & Version Control -->
+          <div class="perspective h-64 cursor-pointer flip-trigger">
+            <div class="flip-card h-full">
+              <div
+                class="face bg-white border border-slate-200 shadow p-8 flex flex-col justify-center items-center text-center"
+              >
+                <h4 class="text-xl font-bold mb-2">
+                  Git &amp; Version Control
+                </h4>
+                <p class="text-slate-500 text-sm">
+                  Managing projects from init to deploy — staging, commits, and
+                  pushing to GitHub as part of my regular workflow.
+                </p>
+              </div>
+              <div
+                class="face back bg-slate-900 flex flex-col justify-center items-center text-white text-center p-8"
+              >
+                <p class="text-slate-400 text-sm">
+                  Git Basics <br />
+                  GitHub <br />
+                  Branching <br />
+                  .gitignore Hygiene <br />
+                  Commit History
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 — UI/UX -->
+          <div class="perspective h-64 cursor-pointer flip-trigger">
+            <div class="flip-card h-full">
+              <div
+                class="face bg-white border border-slate-200 shadow p-8 flex flex-col justify-center items-center text-center"
+              >
+                <h4 class="text-xl font-bold mb-2">UI/UX Design</h4>
+                <p class="text-slate-500 text-sm">
+                  Creating clean layouts and visually balanced interfaces that
+                  are easy to use and easy to navigate.
+                </p>
+              </div>
+              <div
+                class="face back bg-slate-900 flex flex-col justify-center items-center text-white text-center p-8"
+              >
+                <p class="text-slate-400 text-sm">
+                  Wireframing <br />
+                  Visual Hierarchy <br />
+                  User Experience <br />
+                  Modern Interfaces <br />
+                  Creative Design
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 — Problem Solving & Teamwork -->
+          <div class="perspective h-64 cursor-pointer flip-trigger">
+            <div class="flip-card h-full">
+              <div
+                class="face bg-white border border-slate-200 shadow p-8 flex flex-col justify-center items-center text-center"
+              >
+                <h4 class="text-xl font-bold mb-2">
+                  Problem Solving &amp; Teamwork
+                </h4>
+                <p class="text-slate-500 text-sm">
+                  Collaborating on academic and personal projects while building
+                  logical thinking and adaptability.
+                </p>
+              </div>
+              <div
+                class="face back bg-slate-900 flex flex-col justify-center items-center text-white text-center p-8"
+              >
+                <p class="text-slate-400 text-sm">
+                  Communication <br />
+                  Adaptability <br />
+                  Team Collaboration <br />
+                  Critical Thinking <br />Continuous Learning
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT — parallax tilt on photo -->
+    <section id="about" class="py-20 bg-white overflow-hidden">
+      <div
+        class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div>
+          <img
+            src="assets/images/elidan.jpg"
+            alt="Elidan"
+            class="rounded-2xl shadow-lg w-full object-cover"
+            style="filter: grayscale(15%) brightness(0.92) saturate(1.1)"
+          />
+        </div>
+
+        <div>
+          <h3 class="text-4xl font-extrabold mb-6">About Me</h3>
+
+          <p class="text-slate-600 leading-relaxed mb-4">
+            I'm a 3rd-year BS Information Technology student, and most of my
+            learning has happened through building real projects. I've made a
+            PHP/MySQL web app that showcases local food spots in Puerto Princesa
+            and a Laravel-based system for managing fishing tools, and I keep
+            adding to my set of Power BI dashboards.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            Building web apps taught me how data gets created and stored.
+            Working with dashboards showed me how much more that data can say
+            when it's presented well, and that's the direction I want to grow
+            in.
+          </p>
+          <p class="text-slate-600 leading-relaxed mb-4">
+            I learn best by doing. Most of what I know came from something
+            breaking and me digging in until I understood why. I'm now looking
+            for an opportunity where I can keep learning that way, working with
+            real data and people who know more than I do.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div
+              class="bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-slate-400 transition-colors"
+            >
+              <div class="mono text-xs uppercase text-slate-500 mb-1">
+                Education
+              </div>
+              <div class="text-sm font-semibold">BS Information Technology</div>
+            </div>
+            <div
+              class="bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-slate-400 transition-colors"
+            >
+              <div class="mono text-xs uppercase text-slate-500 mb-1">
+                Location
+              </div>
+              <div class="text-sm font-semibold">Palawan, Philippines</div>
+            </div>
+            <div
+              class="bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-slate-400 transition-colors"
+            >
+              <div class="mono text-xs uppercase text-slate-500 mb-1">
+                Availability
+              </div>
+              <div class="text-sm font-semibold">Open for OJT / Internship</div>
+            </div>
+            <div
+              class="bg-slate-50 border border-slate-200 rounded-lg p-4 hover:border-slate-400 transition-colors"
+            >
+              <div class="mono text-xs uppercase text-slate-500 mb-1">
+                Languages
+              </div>
+              <div class="text-sm font-semibold">English, Filipino</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 bg-slate-900 text-white">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-4xl font-extrabold mb-3">Let's Work Together</h3>
+        <p class="text-slate-400 mb-12">I typically reply within 24 hours.</p>
+
+        <div class="grid sm:grid-cols-3 gap-4 text-left">
+          <a
+            href="mailto:elsorafuertes@gmail.com"
+            class="group flex items-center gap-4 bg-slate-800 border border-slate-700 rounded-xl p-5 hover:border-white transition-colors"
+          >
+            <span
+              class="w-11 h-11 shrink-0 rounded-full bg-slate-700 group-hover:bg-white flex items-center justify-center text-white group-hover:text-slate-900 transition-colors"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+            <span class="min-w-0">
+              <span
+                class="block mono text-[10px] tracking-widest uppercase text-slate-400"
+                >Email</span
+              >
+              <span class="block text-sm font-semibold truncate"
+                >elsorafuertes@gmail.com</span
+              >
+            </span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/elidan-fuertes-66542b299/"
+            target="_blank"
+            class="group flex items-center gap-4 bg-slate-800 border border-slate-700 rounded-xl p-5 hover:border-white transition-colors"
+          >
+            <span
+              class="w-11 h-11 shrink-0 rounded-full bg-slate-700 group-hover:bg-white flex items-center justify-center text-white group-hover:text-slate-900 transition-colors"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </span>
+            <span class="min-w-0">
+              <span
+                class="block mono text-[10px] tracking-widest uppercase text-slate-400"
+                >LinkedIn</span
+              >
+              <span class="block text-sm font-semibold">Elidan Fuertes</span>
+            </span>
+          </a>
+
+          <a
+            href="https://github.com/Elidann"
+            target="_blank"
+            class="group flex items-center gap-4 bg-slate-800 border border-slate-700 rounded-xl p-5 hover:border-white transition-colors"
+          >
+            <span
+              class="w-11 h-11 shrink-0 rounded-full bg-slate-700 group-hover:bg-white flex items-center justify-center text-white group-hover:text-slate-900 transition-colors"
+            >
+              <i class="fa-brands fa-github"></i>
+            </span>
+            <span class="min-w-0">
+              <span
+                class="block mono text-[10px] tracking-widest uppercase text-slate-400"
+                >GitHub</span
+              >
+              <span class="block text-sm font-semibold">@Elidann</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="py-6 text-center bg-black text-slate-400">
+      <p class="mono text-xs">
+        © 2026 <span class="text-slate-300">Eli.Digital</span>
+        /Elidan Fuertes. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="src/js/scripts.js"></script>
+  </body>
+</html>
